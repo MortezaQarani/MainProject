@@ -1,8 +1,8 @@
 ﻿
 string firstName;
 string lastName;
-long phoneNumber=123456789;
-string phone;
+long phoneNumber;
+string phone="";
 int age=0;
 bool ageFlag = true;
 bool phonNumberFlag = true;
@@ -56,6 +56,7 @@ while (phonNumberFlag)
         if ((phone.Length == 11 && phone.StartsWith('0')) || (phone.Length == 10 && !phone.StartsWith('0')))
         {
             phoneNumber = long.Parse(phone);
+            phone = phoneNumber.ToString();
             phonNumberFlag = false;
         }
         else if (phone.Length == 13 && phone.StartsWith("+98"))
@@ -79,5 +80,5 @@ while (phonNumberFlag)
     }
 }
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine($"\nA user was registered with the following information:\nName: {firstName} {lastName}\nPhone number: 0{phoneNumber}\nAge: {age} ");
+Console.WriteLine($"\nA user was registered with the following information:\nName: {firstName} {lastName}\nPhone number: 0{phone}\nAge: {age} ");
 
