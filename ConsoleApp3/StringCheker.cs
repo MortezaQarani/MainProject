@@ -15,9 +15,9 @@ namespace ConsoleApp3
             string firstName = "";
             Console.ForegroundColor = ConsoleColor.Green;
             int top = Console.GetCursorPosition().Top;
-            Console.WriteLine($"Please ente your {lastOrFirst}:");
+            Console.WriteLine($"Please enter your {lastOrFirst}:");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.SetCursorPosition($"Please ente your {lastOrFirst}:".Length, top);
+            Console.SetCursorPosition($"Please enter your {lastOrFirst}:".Length, top);
             firstName = Console.ReadLine();
             return firstName;
         }
