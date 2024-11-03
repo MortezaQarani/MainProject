@@ -12,14 +12,14 @@ namespace ConsoleApp3
     {
         public static string Consolemethod(string lastOrFirst)
         {
-            string firstName = "";
+            string string1 = "";
             Console.ForegroundColor = ConsoleColor.Green;
             int top = Console.GetCursorPosition().Top;
             Console.WriteLine($"Please enter your {lastOrFirst}:");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.SetCursorPosition($"Please enter your {lastOrFirst}:".Length, top);
-            firstName = Console.ReadLine();
-            return firstName;
+            string1 = Console.ReadLine();
+            return string1;
         }
         public static bool ChekString(string firstName, string lastOrFirst)
         {
