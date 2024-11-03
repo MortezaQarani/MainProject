@@ -16,23 +16,8 @@ namespace ConsoleApp3
             bool lastNameFlag = true;
             while (lastNameFlag)
             {
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                int top = Console.GetCursorPosition().Top;
-                Console.WriteLine("Please ente your last name:");
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.SetCursorPosition("Please ente your first name:".Length, top);
-                lastName = Console.ReadLine();
-                if (!Regex.IsMatch(lastName, @"^[a-zA-Z]+$")) 
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalid character in lastName.");
-                    lastNameFlag = true;
-                }
-                else
-                {
-                    lastNameFlag = false;
-                }
+                lastName = StringCheker.Consolemethod("lastname");
+                lastNameFlag = StringCheker.ChekString(lastName, "lastname");
             }
             return lastName;
         }
